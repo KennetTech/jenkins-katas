@@ -2,6 +2,11 @@ pipeline {
   agent any
   stages {
     stage('Parallel Execution') {
+      stage('clone down') {
+        steps {
+          
+        }
+      }
       parallel {
         stage('Say hello') {
           steps {
