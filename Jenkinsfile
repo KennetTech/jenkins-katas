@@ -2,10 +2,10 @@ pipeline {
   agent any
   stages {
     stage('Parallel Execution') {
-      stage('clone down') {
-        steps {
-          
-        }
+      stage('clown down') {
+          steps {
+            stash excludes: '.git', name: 'code'
+          }
       }
       parallel {
         stage('Say hello') {
